@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="CSS Style/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Css Style/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="CSS Style/favicon/favicon-16x16.png">
+    <link rel="manifest" href="CSS Style/manifest.json">
+    <link rel="mask-icon" href="CSS Syle/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="Carewell Hospital">
+    <meta name="application-name" content="Carewell Hospital">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="CSS Style/Main.css">
+    <link rel="stylesheet" href="CSS Style/Forms.css">
+    <title>Consulting Reservations - Carewell Hospital</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <img src="Images/Logo1.png" alt="carewell's logo" class="logo">
+                <div class="right">
+                    <!-- Menu Toggle (Hamburger Icon for Mobile) -->
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle"> <!--This is for the mobile and tab design. It helps make the pages more organized and less complicated-->
+                    <label for="menu-toggle" class="hamburger">&#9776; Menu</label>
+                    <div class="nav-links">
+                        <!-- Navigation Links -->
+                    <ul>
+                        <li><a href="index.html" class="box">Home</a></li>
+                        <li><a href="AboutUs.html" class="box">About Us</a></li>
+                        <li><a href="ContactUs.html" class="box">Contact Us</a></li>
+                        <li><a href="Services.html" class="box">Services</a></li>
+                        <li><a href="Doctors.html" class="box">Doctors</a></li>
+                        <li><a href="Reservations.html" class="box">Reservations</a></li>
+                        <li><a href="Pharmacy.html" class="box">Pharmacy</a></li>
+                    </ul>
+                    </div>
+                    <!-- Search Bar -->
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search">
+                        <button class="search-button">🔍</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="reservation">
+            <h1>Reservation</h1>
+            <div class="reservation-form">
+                <form>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="number">Phone Number:</label><br>
+                    <input type="number" maxlength="10" id="number" name="number" required><br>
+                    <label for="email">E-mail:</label><br>
+                    <input type="text" id="email" name="email" required><br>
+                    <label for="date">Date:</label><br>
+                    <input type="date" id="date" name="date" required><br>
+                    <label for="name">Doctor Name:</label><br>
+                    <input type="text" id="doctor" name="doctor" required><br>
+                    <label for="specialization">Specialization:</label><br>
+                    <select id="specialization" name="specialization" required>
+                        <option value="general">General Medicine</option>
+                        <option value="orthopedic">Orthopedic</option>
+                        <option value="obstestric">Obstetrics and Gynoclogy</option><br>
+                        <option value="pediatric">Pediatric</option>
+                        <option value="oncology">Oncology</option>
+                        <option value="neurology">Neurology</option>
+                    </select>
+                    <label for="branch">Hospital Branch:</label><br>
+                    <select id="branch" name="branch" required>
+                        <option>Downtown</option>
+                        <option>Uptown</option>
+                        <option>Southside</option>
+                    </select>
+                    <button type="submit" class="submit">Submit</button>
+                    <button type="reset" class="reset">Reset</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="contact">
+                <div data-label="Phone Number: ">+94 76 667 894</div>
+                <div data-label="Hotline: ">011 333 333</div>
+                <div data-label="Address: ">323 Park Road, Colombo 05</div>
+            </div>
+            <div class="copyright">
+                <p>&copy; Carewell Hospital</p>
+            </div>
+        </div>  
+    </footer>
+</body>
+</html>

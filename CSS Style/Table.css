@@ -1,0 +1,191 @@
+/* About Us Page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* For consistent layout */
+}
+h1, h2{
+   background-color: var(--h-color);
+   padding: 1rem;
+   margin: 1rem;
+}
+.branch{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin: 1rem;
+    align-items: center;
+    background-color: var(--primary-color);
+    box-shadow: 1px 1px 5px solid rgba(0,0,0,10.1);
+    border-radius: 10px;
+}
+h3{
+    background-color: #6eaff9;
+    padding: 1rem;
+    margin-bottom: 10px;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    white-space: wrap;
+    border-radius: 8px 8px 0 0; 
+}
+/* Location Images */
+.hospital{
+    width: 90%;
+    height: auto;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px; 
+}
+iframe{
+    width: 90%;
+    height: 450px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+p{
+    font-size: var(--font-size);
+    line-height: 1.5rem;
+    text-align: left;
+    white-space: normal;
+}
+/* Table */
+table{
+    border-collapse: separate;
+    width: 100%;
+    background-color: #4c9ede89;
+    font-size: 20px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 10px;
+}
+table thead{
+    display: none;
+}
+tbody td{
+    display: block;
+    flex-direction: column;
+    font-size: 16px;
+}
+tbody tr {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+    border-bottom: 2px solid black;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+}
+tbody td::before {
+    content: attr(data-label); /* Data attribute for mobile label */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+@media screen and (min-width: 728px) and (max-width: 1024px){
+    .branch{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .hospital{
+        width: 45%;
+        height: auto;
+    }
+    iframe{
+        width: 50%;
+        height: auto;
+    }
+    p{
+        word-break: normal;
+    }
+    table{
+        width: 100%;
+        display: table;
+        border-collapse: separate;
+        display: block;
+        border-spacing: 10px 0;
+        background-color: var(--bg-color);
+    }
+    table thead {
+        display: table-header-group;
+        background-color: #7da3fd;
+    }
+    td, th{
+        padding: 10px;
+    }
+    tbody td {
+        display: table-cell;
+        border-bottom: none;
+        padding: 10px;
+        background-color: white;
+    }
+    tbody tr {
+        display: table-row;
+    }
+    tbody td::before {
+        display: none;
+    }
+    tfoot{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .branch{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    .hospital{
+        width: 40%;
+        height: 500px;
+    }
+    iframe{
+        width: 50%;
+        height: 400px;
+    }
+    p{
+        word-break: normal;
+    }
+    .branch-summary{
+        width: 100%;
+    }
+    table{
+        width: 100%;
+        display: table;
+        border-collapse: separate;
+        border-spacing: 10px 0;
+        background-color: var(--bg-color);
+    }
+    table thead {
+        display: table-header-group;
+        background-color: #7da3fd;
+    }
+    td, th{
+        padding: 10px;
+    }
+    tbody td {
+        display: table-cell;
+        border-bottom: none;
+        padding: 10px;
+        background-color: white;
+    }
+    tbody tr {
+        display: table-row;
+    }
+    tbody td::before {
+        display: none;
+    }
+    tfoot{
+        text-align: center;
+    }
+}

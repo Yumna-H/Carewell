@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="CSS Style/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Css Style/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="CSS Style/favicon/favicon-16x16.png">
+    <link rel="manifest" href="CSS Style/manifest.json">
+    <link rel="mask-icon" href="CSS Syle/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="Carewell Hospital">
+    <meta name="application-name" content="Carewell Hospital">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="CSS Style/Main.css">
+    <link rel="stylesheet" href="CSS Style/Forms.css">
+    <title>Pharmacy - Carewell Hospital</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <img src="Images/Logo1.png" alt="carewell's logo" class="logo">
+                <div class="right">
+                    <!-- Menu Toggle (Hamburger Icon for Mobile) -->
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle"> <!--This is for the mobile and tab design. It helps make the pages more organized and less complicated-->
+                    <label for="menu-toggle" class="hamburger">&#9776; Menu</label>
+                    <div class="nav-links">
+                        <!-- Navigation Links -->
+                    <ul>
+                        <li><a href="index.html" class="box">Home</a></li>
+                        <li><a href="AboutUs.html" class="box">About Us</a></li>
+                        <li><a href="ContactUs.html" class="box">Contact Us</a></li>
+                        <li><a href="Services.html" class="box">Services</a></li>
+                        <li><a href="Doctors.html" class="box">Doctors</a></li>
+                        <li><a href="Reservations.html" class="box">Reservations</a></li>
+                        <li><a href="Pharmacy.html" class="box">Pharmacy</a></li>
+                    </ul>
+                    </div>
+                    <!-- Search Bar -->
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search">
+                        <button class="search-button">🔍</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="pharmacy">
+            <h1>Pharmacy</h1>
+            <div class="pharmacy-form">
+                <label for="medicine-name">Select Medicine:</label><br>
+                <select id="medicine" name="medicine" required>
+                    <option value="paracetamol">Paracetamol</option>
+                    <option value="iboprofen">Ibuprofen</option>
+                    <option value="amoxicillin">Amoxicillin</option>
+                    <option value="cyclobenzaprine">Cyclobenzaprine</option>
+                    <option value="metformin">Metformin</option>
+                    <option value-="amlodipine">Amlodipine</option>
+                    <option value="insulin">Insulin</option>
+                    <option value="penicillin">Penicillin</option>
+                    <option value="phenobarbital">Phenobarbital</option>
+                    <option value="meloxicam">Meloxicam</option>
+                </select><br>
+                <label for="quantity">Quantity:</label><br>
+                    <select id="quantity" name="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select><br>
+                <label for="file01">Upload your Prescription: </label><br>
+                <input type="file" name="prescription" id="file01"><br>
+                    <h2>Customer Details</h2>
+                    <div class="customer-details">
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                        <label for="address">Address:</label><br>
+                        <input type="text" id="address" name="address" required><br>
+                        <label for="number">Phone Number:</label><br>
+                        <input type="number" maxlength="10" id="number" name="number" required><br>
+                        <!-- Payment Amount -->
+                        <label for="amount">Payment Amount:</label><br>
+                        <input type="number" id="amount" name="amount" min="1" required><br>
+                        <!--Payment Method-->
+                        <legend>Payment Method:</legend>
+                        <div class="payment-method">
+                            <label for="creditcard"><input type="radio" id="creditcard" name="paymentmethod" value="creditCard"> Credit Card</label><br>
+                            <label for="debitcard"><input type="radio" id="debitcard" name="paymentmethod" value="debitCard"> Debit Card</label><br>
+                            <label for="cash"><input type="radio" id="cash" name="paymentMethod" value="cash"> Cash</label><br>
+                        </div>
+                    </div>
+                <button type="submit" class="submit">Submit</button>
+                <button type="reset" class="reset">Reset</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="contact">
+                <div data-label="Phone Number: ">+94 76 667 894</div>
+                <div data-label="Hotline: ">011 333 333</div>
+                <div data-label="Address: ">323 Park Road, Colombo 05</div>
+            </div>
+            <div class="copyright">
+                <p>&copy; Carewell Hospital</p>
+            </div>
+        </div>  
+    </footer>
+</body>
+</html>

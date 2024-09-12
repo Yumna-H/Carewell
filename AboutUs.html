@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="CSS Style/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Css Style/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="CSS Style/favicon/favicon-16x16.png">
+    <link rel="manifest" href="CSS Style/manifest.json">
+    <link rel="mask-icon" href="CSS Syle/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="Carewell Hospital">
+    <meta name="application-name" content="Carewell Hospital">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="CSS Style/Main.css">
+    <link rel="stylesheet" href="CSS Style/Table.css">
+    <title>About Us - Carewell Hospital</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <img src="Images/Logo1.png" alt="carewell's logo" class="logo">
+                <div class="right">
+                    <!-- Menu Toggle (Hamburger Icon for Mobile) -->
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle"> <!--This is for the mobile and tab design. It helps make the pages more organized and less complicated-->
+                    <label for="menu-toggle" class="hamburger">&#9776; Menu</label>
+                    <div class="nav-links">
+                        <!-- Navigation Links -->
+                    <ul>
+                        <li><a href="index.html" class="box">Home</a></li>
+                        <li><a href="AboutUs.html" class="box">About Us</a></li>
+                        <li><a href="ContactUs.html" class="box">Contact Us</a></li>
+                        <li><a href="Services.html" class="box">Services</a></li>
+                        <li><a href="Doctors.html" class="box">Doctors</a></li>
+                        <li><a href="Reservations.html" class="box">Reservations</a></li>
+                        <li><a href="Pharmacy.html" class="box">Pharmacy</a></li>
+                    </ul>
+                    </div>
+                    <!-- Search Bar -->
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search">
+                        <button class="search-button">🔍</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="location">
+            <h2>Our Branches</h2>
+            <div class="branch">
+                <h3>Main Branch: Downtown Hospital</h3>
+                <img src="Images/Hospitalmain.jpeg" alt="Hospital Main Branch" class="hospital">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0163186241143!2d79.8746113!3d6.8886483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a2d53bc7337%3A0xeb844e84cc4343f5!2s323%20Park%20Rd%2C%20Colombo%2000500!5e0!3m2!1sen!2slk!4v1725118504993!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p><b>Description:</b> The central facility offering a full range of medical services, including emergency care, surgery, and specialized treatments.</p>
+            </div>
+            <div class="branch">
+                <h3>Uptown Clinic</h3>
+                <img src="Images/branch2.jpg" alt="Uptown Clinic" class="hospital">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1860.625778553231!2d79.85257000640638!3d6.915806620555373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596a47632c45%3A0x37341bc4ba9fc0fa!2sStanley%20Jansz%20Grounds%2C%20Alwis%20Pl%2C%20Colombo!5e0!3m2!1sen!2slk!4v1725899013607!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p><b>Description:</b> Provides outpatient services, including routine check-ups, minor procedures, and follow-up care. Focuses on community health and preventive care.</p>
+            </div>
+            <div class="branch">
+                <h3>Southside Urgent Care</h3>
+                <img src="Images/branch3.jpg" alt="Southside Clinic" class="hospital">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9186782833776!2d79.85561058066483!3d6.900328975305035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25962f7d422d5%3A0x3e037eb4c1305209!2sColombo%20University%20Playground%2C%20Colombo%2000700!5e0!3m2!1sen!2slk!4v1725899160738!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p><b>Description:</b> Offers urgent medical care for non-life-threatening conditions. Open extended hours for quick, convenient treatment.</p>
+            </div>
+        </section>
+        <section class="branch-summary">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Branch</th>
+                        <th>Services Offered</th>
+                        <th>Address</th>
+                        <th>Contact Information</th>
+                    </tr>
+                </thead>
+                <tbody>    
+                    <tr>
+                        <td data-label="Branch: ">Downtown</td>
+                        <td data-label="Services Offered: ">Emergency care, surgeries, specialized treatments</td>
+                        <td data-label="Address: ">323 Park Road</td>
+                        <td data-label="Contact Information: ">076 766 7333</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Branch: ">Uptown</td>
+                        <td data-label="Services Offered: ">Outpatient services, minor procedures</td>
+                        <td data-label="Address: ">Alwis Pl, Colombo</td>
+                        <td data-label="Contact Information: ">077 545 3435</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Branch: ">Southside</td>
+                        <td data-label="Services Offered: ">Urgent care, walk-in treatments</td>
+                        <td data-label="Address: ">Colombo 00700</td>
+                        <td data-label="Contact Information: ">074 728 1938</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">For more information, visit our branches or contact them.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="contact">
+                <div data-label="Phone Number: ">+94 76 667 894</div>
+                <div data-label="Hotline: ">011 333 333</div>
+                <div data-label="Address: ">323 Park Road, Colombo 05</div>
+            </div>
+            <div class="copyright">
+                <p>&copy; Carewell Hospital</p>
+            </div>
+        </div>  
+    </footer>
+</body>
+</html>
