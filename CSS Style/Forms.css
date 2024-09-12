@@ -17,6 +17,7 @@ body {
     text-align: left;
     font-size: 2rem;
     color: var(--color);
+    margin-top: 20px;
     margin-bottom: 1.5rem;
     padding-bottom: 10px;
     margin-left: 1rem;
@@ -190,7 +191,31 @@ legend{
 
 /* Responsive adjustments */
 @media screen and (min-width: 728px) and (max-width: 1024px) {
-    form, .contact-info, .reservation{
+    form, .contact-info{
+        width: 100%;
+    }
+    form textarea {
+        min-height: 80px; 
+    }
+    .submit, .reset{
+        width: 95%;
+        align-self: center;
+    }
+    .reservation{
+        width: 100%; 
+        max-width: 1350px; 
+        margin: 20px auto;
+    }
+    .pharmacy{
+        width: 100%; 
+        max-width: 1350px; 
+        margin: 20px auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    form, .contact-info{
+        margin: 20px auto;
         width: 100%;
     }
     form textarea {
@@ -205,20 +230,7 @@ legend{
         max-width: 1350px; 
         margin: 20px auto;
     }
-}
-
-@media screen and (min-width: 1024px) {
-    form, .contact-info, .reservation-form{
-        width: 100%;
-    }
-    form textarea {
-        min-height: 80px; 
-    }
-    .submit, .reset{
-        width: 95%;
-        align-self: center;
-    }
-    .pharmacy{
+    .reservation{
         width: 100%; 
         max-width: 1350px; 
         margin: 20px auto;

@@ -157,21 +157,44 @@ footer div::before{
 @media screen and (min-width:728px) and (max-width:1024px){
     .logo{
         width: 10rem;
+        flex-grow: 1;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 0 1rem;
+        width: 100%;
+    }
+    .menu{
+        display: flex;
+        flex-grow: 2;
+        justify-content: space-between;
     }
     .right{
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        width: 100%;
+        flex-grow: 1;
+        padding-right: 1rem;
+        margin-left: 25rem;
+        position: relative;
     }
     .nav-links{
         position: absolute;
-        top: 60px; 
-        right: 0; 
+        gap: 1rem;
+        margin-left: auto; 
     }
     .hamburger {
         margin-left: auto;
         margin-right: 1rem; 
+    }
+    .search-button {
+        margin-left: 1rem; 
+    }
+    .search-bar {
+        display: flex;
+        justify-content: flex-end; 
     }
     .search-button {
         display: flex;
@@ -207,7 +230,6 @@ footer div::before{
 @media screen and (min-width:1024px){
     header{
         width: 100%;
-        background-color: none;
     }
     .logo{
         margin-right: 2rem;
