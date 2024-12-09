@@ -1,249 +1,196 @@
-/* main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 1rem;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* For consistent layout */
 }
-main h1 {
+
+:root {
+    --font-size: 1.1rem;
+    --bg-color: #f4f7f6;
+    --primary-color: #eaf1ff;
+    --primary-color-dark: #5483f2;
+    --h-color: rgba(143, 184, 232, 0.769);
+    --color: #445eae;
+}
+
+body {
+    background-color: var(--bg-color);
+    width: 100%;
+    font-family: Arial, sans-serif;
+    padding: 1rem;
+}
+
+/* Base Styles */
+main {
+    padding: 1rem;
+}
+
+h1 {
     text-align: center;
-    font-size: 2rem;
-    color: var(--primary-color-dark);
+    color: var(--color);
+    font-size: 1.8rem;
     margin-bottom: 1rem;
 }
-.medicine-category {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border: 1px solid var(--h-color);
-    border-radius: 8px;
-    background-color: var(--primary-color);
-}
-.medicine-category h2 {
+
+h3 {
     font-size: 1.5rem;
     color: var(--primary-color-dark);
     margin-bottom: 1rem;
+    text-align: center;
+    text-decoration: underline;
 }
-.medicine-category label {
+
+/* Medicines Section */
+#medicines {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-    font-size: var(--font-size);
-    /* color: var(--color); 
-}
-.medicine-category input {
-    width: 60px;
-    padding: 0.3rem;
-    border: 1px solid var(--h-color);
-    border-radius: 5px;
-    font-size: var(--font-size);
-    text-align: center;
-}
-.order-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-.order-table thead {
-    background-color: var(--primary-color-dark);
-    color: white;
-}
-.order-table th, .order-table td {
-    border: 1px solid var(--h-color);
-    text-align: center;
-    padding: 0.5rem;
-    font-size: var(--font-size);
-}
-.order-table tfoot td {
-    font-weight: bold;
-    color: var(--primary-color-dark);
-}
-.order-table tbody td {
-    background-color: var(--primary-color);
-}
-button {
-    margin-top: 1rem;
-    padding: 0.7rem 1.5rem;
-    font-size: var(--font-size);
-    background-color: var(--primary-color-dark);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-button:hover {
-    background-color: var(--h-color);
-} */
-
-/* Mobile View (Default) */
-main {
-    margin: 1rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     padding: 1rem;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    justify-content: center;
 }
 
-main h1 {
+.medicine-item {
+    background-color: var(--primary-color);
+    border: 1px solid var(--color);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    font-size: 1.8rem;
+    width: calc(33.333% - 1.5rem); /* Three items per row */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.medicine-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.medicine-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color);
+    margin: 0.5rem 0;
+}
+
+.medicine-price {
+    color: var(--primary-color-dark);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.medicine-quantity {
+    width: 60%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid var(--color);
+    border-radius: 7px;
+}
+
+.add-to-cart-btn {
+    background-color: var(--primary-color-dark);
+    width: 60%;
+    font-size: 1.2rem;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--h-color);
+}
+
+/* Cart Section */
+#cart {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+}
+
+#cart h2 {
+    text-align: center;
     color: var(--primary-color-dark);
     margin-bottom: 1rem;
 }
 
-.medicine-category {
-    margin-bottom: 1.5rem;
-    padding: 0.8rem;
-    border: 1px solid var(--h-color);
-    border-radius: 8px;
-    background-color: var(--primary-color);
-}
-
-.medicine-category h2 {
-    font-size: 1.2rem;
-    color: var(--primary-color-dark);
-    margin-bottom: 0.8rem;
-}
-
-.medicine-category label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem; 
-    width: 100%;
-}
-
-.medicine-category input {
-    width: 60px; 
-    padding: 0.3rem;
-    border: 1px solid var(--h-color);
-    border-radius: 5px;
-    font-size: 1rem;
-    text-align: center; 
-    background-color: #fff;
-    box-sizing: border-box; 
-}
-
-.order-table {
+/* Cart Table Styling */
+#cart table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
-    font-size: 0.9rem; 
 }
 
-.order-table thead {
-    background-color: var(--primary-color-dark);
-    color: white;
-}
-
-.order-table th,
-.order-table td {
-    border: 1px solid var(--h-color);
+#cart table th, #cart table td {
+    border: 1px solid var(--color);
+    padding: 0.8rem;
     text-align: center;
-    padding: 0.5rem;
 }
 
-.order-table tfoot td {
+#cart table th {
+    background-color: var(--h-color);
+    color: #fff;
+}
+
+#cart table tfoot td {
     font-weight: bold;
-    color: var(--primary-color-dark);
-}
-
-.order-table tbody td {
-    background-color: var(--primary-color);
-}
-
-button {
-    display: block;
-    width: 100%;
-    margin: 1rem 0;
-    padding: 0.7rem;
-    font-size: var(--font-size);
     background-color: var(--primary-color-dark);
-    color: white;
+    color: #fff;
+}
+
+/* Buttons */
+button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color-dark);
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 button:hover {
     background-color: var(--h-color);
 }
 
-@media screen and (min-width: 728px) and (max-width: 1024px) {
-    main {
-        max-width: 90%;
-        margin: 1rem auto;
+input[type="number"], input[type="text"] {
+    width: 60%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid var(--color);
+    border-radius: 7px;
+}
+
+@media screen and (min-width: 720px) {
+    #medicines {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
     }
 
-    .medicine-category {
-        padding: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .medicine-category label {
-        font-size: 1rem; 
-        justify-content: flex-start; 
-    }
-
-    .medicine-category input {
-        margin-left: 10px; 
-    }
-
-    .order-table {
-        font-size: 1rem; 
-    }
-
-    button {
-        width: auto; 
-        margin: 1rem auto;
+    .medicine-item {
+        width: calc(25% - 1.5rem); /* Four items per row */
     }
 }
 
-@media screen and (min-width: 1024px) {
-    main {
-        max-width: 90vw; 
-        margin: 2rem auto;
-        padding: 1.5rem;
+@media screen and (min-width: 1040px) {
+    #medicines {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 40px;
+        padding: 15px;
     }
 
-    main h1 {
-        font-size: 2rem; 
-    }
-    .medicine-category {
-        padding: 1.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .medicine-category h2 {
-        font-size: 1.5rem;
-    }
-
-    .medicine-category label {
-        display: flex;
-        justify-content: space-between; 
-        align-items: center;
-        font-size: 1rem; 
-    }
-
-    .medicine-category input {
-        margin-left: auto; 
-        width: 60px; 
-        font-size: 1rem;
-    }
-
-    .order-table th,
-    .order-table td {
-        font-size: 1rem; 
-    }
-
-    button {
-        display: inline-block; 
-        padding: 0.7rem 1.5rem;
+    .medicine-item {
+        width: calc(20% - 1.5rem); /* Five items per row */
     }
 }
