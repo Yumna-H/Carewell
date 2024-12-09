@@ -89,7 +89,7 @@ nav{
     display: block;
 }
 .nav-links a:hover{
-    background-color: var(--bg-color);
+    background-color: rgba(107, 152, 203, 0.769);;
     cursor: pointer;
 }
 /* Show menu when the checkbox is checked */
@@ -126,6 +126,7 @@ footer{
     width: 100%;
     position: relative;
     bottom: 0%;
+    color: black;
 }
 footer div::before{
     content: attr(data-label);

@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="CSS Style/Main.css">
-    <link rel="stylesheet" href="CSS Style/Forms.css">
+    <link rel="stylesheet" href="CSS Style/Pharmacy.css">
     <title>Pharmacy - Carewell Hospital</title>
 </head>
 <body>
@@ -47,60 +47,135 @@
         </nav>
     </header>
     <main>
-        <div class="pharmacy">
-            <h1>Pharmacy</h1>
-            <div class="pharmacy-form">
-                <label for="medicine-name">Select Medicine:</label><br>
-                <select id="medicine" name="medicine" required>
-                    <option value="paracetamol">Paracetamol</option>
-                    <option value="iboprofen">Ibuprofen</option>
-                    <option value="amoxicillin">Amoxicillin</option>
-                    <option value="cyclobenzaprine">Cyclobenzaprine</option>
-                    <option value="metformin">Metformin</option>
-                    <option value-="amlodipine">Amlodipine</option>
-                    <option value="insulin">Insulin</option>
-                    <option value="penicillin">Penicillin</option>
-                    <option value="phenobarbital">Phenobarbital</option>
-                    <option value="meloxicam">Meloxicam</option>
-                </select><br>
-                <label for="quantity">Quantity:</label><br>
-                    <select id="quantity" name="quantity">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select><br>
-                <label for="file01">Upload your Prescription: </label><br>
-                <input type="file" name="prescription" id="file01"><br>
-                    <h2>Customer Details</h2>
-                    <div class="customer-details">
-                        <label for="name">Name:</label><br>
-                        <input type="text" id="name" name="name" required><br>
-                        <label for="address">Address:</label><br>
-                        <input type="text" id="address" name="address" required><br>
-                        <label for="number">Phone Number:</label><br>
-                        <input type="number" maxlength="10" id="number" name="number" required><br>
-                        <!-- Payment Amount -->
-                        <label for="amount">Payment Amount:</label><br>
-                        <input type="number" id="amount" name="amount" min="1" required><br>
-                        <!--Payment Method-->
-                        <legend>Payment Method:</legend>
-                        <div class="payment-method">
-                            <label for="creditcard"><input type="radio" id="creditcard" name="paymentmethod" value="creditCard"> Credit Card</label><br>
-                            <label for="debitcard"><input type="radio" id="debitcard" name="paymentmethod" value="debitCard"> Debit Card</label><br>
-                            <label for="cash"><input type="radio" id="cash" name="paymentMethod" value="cash"> Cash</label><br>
-                        </div>
-                    </div>
-                <button type="submit" class="submit">Submit</button>
-                <button type="reset" class="reset">Reset</button>
+        <h1>Order Medicine</h1>
+        <section id="medicineForm">
+            <div class="medicine-category">
+                <h2>Analgesics</h2>
+                <label>Paracetamol (LKR 150): 
+                    <input type="number" name="Paracetamol" value="0" min="0">
+                </label><br>
+                <label>Ibuprofen (LKR 200): 
+                    <input type="number" name="Ibuprofen" value="0" min="0">
+                </label><br>
+                <label>Aspirin (LKR 180): 
+                    <input type="number" name="Aspirin" value="0" min="0">
+                </label><br>
+                <label>Naproxen (LKR 250): 
+                    <input type="number" name="Naproxen" value="0" min="0">
+                </label><br>
+                <label>Salicylic Acid (LKR 300): 
+                    <input type="number" name="Salicylic Acid" value="0" min="0">
+                </label><br>
+                <label>Morphine (LKR 350): 
+                    <input type="number" name="Morphine" value="0" min="0">
+                </label><br>
             </div>
-        </div>
+            <div class="medicine-category">
+                <h2>Antibiotics</h2>
+                <label>Amoxicillin (LKR 500): 
+                    <input type="number" name="Amoxicillin" value="0" min="0">
+                </label><br>
+                <label>Ciprofloxacin (LKR 550): 
+                    <input type="number" name="Ciprofloxacin" value="0" min="0">
+                </label><br>
+                <label>Clindamycin (LKR 700): 
+                    <input type="number" name="Clindamycin" value="0" min="0">
+                </label><br>
+                <label>Metronidazole (LKR 450): 
+                    <input type="number" name="Metronidazole" value="0" min="0">
+                </label><br>
+                <label>Vancomycin (LKR 800): 
+                    <input type="number" name="Vancomycin" value="0" min="0">
+                </label><br>
+            </div>
+            <div class="medicine-category">
+                <h2>Antidepressants</h2>
+                <label>Fluoxetine (LKR 750): 
+                    <input type="number" name="Fluoxetine" value="0" min="0">
+                </label><br>
+                <label>Sertraline (LKR 850): 
+                    <input type="number" name="Sertraline" value="0" min="0">
+                </label><br>
+                <label>Amitriptyline (LKR 900): 
+                    <input type="number" name="Amitriptyline" value="0" min="0">
+                </label><br>
+                <label>Escitalopram (LKR 950): 
+                    <input type="number" name="Escitalopram" value="0" min="0">
+                </label><br>
+                <label>Bupropion (LKR 1200): 
+                    <input type="number" name="Bupropion" value="0" min="0">
+                </label><br>
+                <label>Venlafaxine (LKR 1100): 
+                    <input type="number" name="Venlafaxine" value="0" min="0">
+                </label><br>
+            </div>
+            <div class="medicine-category">
+                <h2>Antihistamines</h2>
+                <label>Loratadine (LKR 350): 
+                    <input type="number" name="Loratadine" value="0" min="0">
+                </label><br>
+                <label>Diphenhydramine (LKR 400): 
+                    <input type="number" name="Diphenhydramine" value="0" min="0">
+                </label><br>
+                <label>Cetirizine (LKR 450): 
+                    <input type="number" name="Cetirizine" value="0" min="0">
+                </label><br>
+                <label>Fexofenadine (LKR 550): 
+                    <input type="number" name="Fexofenadine" value="0" min="0">
+                </label><br>
+                <label>Chlorpheniramine (LKR 350): 
+                    <input type="number" name="Chlorpheniramine" value="0" min="0">
+                </label><br>
+                <label>Cyclizine (LKR 300): 
+                    <input type="number" name="Cyclizine" value="0" min="0">
+                </label><br>
+            </div>
+            <div class="medicine-category">
+                <h2>Antihypertensives</h2>
+                <label>Amlodipine (LKR 500): 
+                    <input type="number" name="Amlodipine" value="0" min="0">
+                </label><br>
+                <label>Losartan (LKR 600): 
+                    <input type="number" name="Losartan" value="0" min="0">
+                </label><br>
+                <label>Metoprolol (LKR 700): 
+                    <input type="number" name="Metoprolol" value="0" min="0">
+                </label><br>
+                <label>Lisinopril (LKR 750): 
+                    <input type="number" name="Lisinopril" value="0" min="0">
+                </label><br>
+                <label>Hydrochlorothiazide (LKR 650): 
+                    <input type="number" name="Hydrochlorothiazide" value="0" min="0">
+                </label><br>
+                <label>Atenolol (LKR 550): 
+                    <input type="number" name="Atenolol" value="0" min="0">
+                </label><br>
+            </div>
+        </section>
+        <section>
+            <h2>Order Summary</h2>
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>Medicine</th>
+                        <th>Quantity</th>
+                        <th>Price (LKR)</th>
+                    </tr>
+                </thead>
+                <tbody id="order-table-body">
+                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total</td>
+                        <td id="total-price">LKR 0</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button id="buy-now">Buy Now</button>
+            <button id="add-to-favorites">Add to Favorites</button>
+            <button id="apply-favorites">Apply Favorites</button>
+        </section>
     </main>
     <footer>
         <div class="footer">

@@ -161,7 +161,7 @@ tbody td::before {
     }
     table{
         width: 100%;
-        display: table;
+        display: block;
         border-collapse: separate;
         border-spacing: 10px 0;
         background-color: var(--bg-color);

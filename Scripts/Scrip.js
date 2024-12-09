@@ -1,0 +1,7 @@
+let medicineForm = document.getElementById("medicineForm")
+let medicineCatergory = document.getElementById("medicine-category")
+let OrderTableBody = document.getElementById("order-table-body")
+let totalPrice = document.getElementById("total-price")
+let buyNow = document.getElementById("buy-now")
+let addToFavorites = document.getElementById("add-to-favorites")
+let applyFavorites = document.getElementById("apply-favorites")

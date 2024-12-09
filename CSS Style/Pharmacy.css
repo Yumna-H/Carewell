@@ -1,0 +1,249 @@
+/* main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+}
+main h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color-dark);
+    margin-bottom: 1rem;
+}
+.medicine-category {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid var(--h-color);
+    border-radius: 8px;
+    background-color: var(--primary-color);
+}
+.medicine-category h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color-dark);
+    margin-bottom: 1rem;
+}
+.medicine-category label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: var(--font-size);
+    /* color: var(--color); 
+}
+.medicine-category input {
+    width: 60px;
+    padding: 0.3rem;
+    border: 1px solid var(--h-color);
+    border-radius: 5px;
+    font-size: var(--font-size);
+    text-align: center;
+}
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.order-table thead {
+    background-color: var(--primary-color-dark);
+    color: white;
+}
+.order-table th, .order-table td {
+    border: 1px solid var(--h-color);
+    text-align: center;
+    padding: 0.5rem;
+    font-size: var(--font-size);
+}
+.order-table tfoot td {
+    font-weight: bold;
+    color: var(--primary-color-dark);
+}
+.order-table tbody td {
+    background-color: var(--primary-color);
+}
+button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    font-size: var(--font-size);
+    background-color: var(--primary-color-dark);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: var(--h-color);
+} */
+
+/* Mobile View (Default) */
+main {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--primary-color-dark);
+    margin-bottom: 1rem;
+}
+
+.medicine-category {
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    border: 1px solid var(--h-color);
+    border-radius: 8px;
+    background-color: var(--primary-color);
+}
+
+.medicine-category h2 {
+    font-size: 1.2rem;
+    color: var(--primary-color-dark);
+    margin-bottom: 0.8rem;
+}
+
+.medicine-category label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem; 
+    width: 100%;
+}
+
+.medicine-category input {
+    width: 60px; 
+    padding: 0.3rem;
+    border: 1px solid var(--h-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center; 
+    background-color: #fff;
+    box-sizing: border-box; 
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.9rem; 
+}
+
+.order-table thead {
+    background-color: var(--primary-color-dark);
+    color: white;
+}
+
+.order-table th,
+.order-table td {
+    border: 1px solid var(--h-color);
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.order-table tfoot td {
+    font-weight: bold;
+    color: var(--primary-color-dark);
+}
+
+.order-table tbody td {
+    background-color: var(--primary-color);
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.7rem;
+    font-size: var(--font-size);
+    background-color: var(--primary-color-dark);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--h-color);
+}
+
+@media screen and (min-width: 728px) and (max-width: 1024px) {
+    main {
+        max-width: 90%;
+        margin: 1rem auto;
+    }
+
+    .medicine-category {
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .medicine-category label {
+        font-size: 1rem; 
+        justify-content: flex-start; 
+    }
+
+    .medicine-category input {
+        margin-left: 10px; 
+    }
+
+    .order-table {
+        font-size: 1rem; 
+    }
+
+    button {
+        width: auto; 
+        margin: 1rem auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        max-width: 90vw; 
+        margin: 2rem auto;
+        padding: 1.5rem;
+    }
+
+    main h1 {
+        font-size: 2rem; 
+    }
+    .medicine-category {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .medicine-category h2 {
+        font-size: 1.5rem;
+    }
+
+    .medicine-category label {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        font-size: 1rem; 
+    }
+
+    .medicine-category input {
+        margin-left: auto; 
+        width: 60px; 
+        font-size: 1rem;
+    }
+
+    .order-table th,
+    .order-table td {
+        font-size: 1rem; 
+    }
+
+    button {
+        display: inline-block; 
+        padding: 0.7rem 1.5rem;
+    }
+}
