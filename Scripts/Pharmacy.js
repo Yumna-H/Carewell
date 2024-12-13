@@ -26,33 +26,45 @@ function loadMedicines() {
 
 function renderMedicines(data) {
     data.forEach(category => {
-        const categoryDiv = document.createElement('div');
-        categoryDiv.classList.add('category');
-        categoryDiv.innerHTML = `<h3>${category.category}</h3>`;
+        // Create a heading for the category
+        const categoryHeading = document.createElement('h3');
+        categoryHeading.classList.add('category-heading');
+        categoryHeading.textContent = category.category;
 
+        // Create a container for the medicines
+        const medicineListDiv = document.createElement('div');
+        medicineListDiv.classList.add('medicine-list');
+
+        // Add each medicine as a card
         category.items.forEach(item => {
             const medicineItemDiv = document.createElement('div');
             medicineItemDiv.classList.add('medicine-item');
 
             medicineItemDiv.innerHTML = `
-                <div class="medicine-row">
-                    <img src="${item.image}" alt="${item.name}" class="medicine-image">
-                    <span class="medicine-name">${item.name}</span>
-                    <span class="medicine-price">LKR ${item.price}</span>
-                    <input type="number" min="1" value="1" id="${item.name}-qty" class="medicine-quantity">
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
+                <img src="${item.image}" alt="${item.name}" class="medicine-image">
+                <p class="medicine-name">${item.name}</p>
+                <p class="medicine-price">LKR ${item.price}</p>
+                <input type="number" min="1" value="1" id="${item.name}-qty" class="medicine-quantity">
+                <button class="add-to-cart-btn">Add to Cart</button>
             `;
 
+            // Add event listener for the 'Add to Cart' button
             const addToCartButton = medicineItemDiv.querySelector('.add-to-cart-btn');
             addToCartButton.addEventListener('click', () => {
                 addToCart(item.name, item.price, `${item.name}-qty`);
             });
 
-            categoryDiv.appendChild(medicineItemDiv);
+            medicineListDiv.appendChild(medicineItemDiv);
         });
 
-        medicineContainer.appendChild(categoryDiv);
+        // Append the category heading and medicine list to the main container
+        const categoryContainer = document.createElement('div');
+        categoryContainer.classList.add('category');
+        categoryContainer.appendChild(categoryHeading);
+        categoryContainer.appendChild(medicineListDiv);
+
+        // Append the category to the medicine container
+        medicineContainer.appendChild(categoryContainer);
     });
 }
 

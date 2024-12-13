@@ -73,7 +73,7 @@ nav{
     position: absolute;
     top: 60px; 
     padding: 1rem;
-    align-self: right;
+    align-self: flex-end;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.962);
     white-space: nowrap;
     z-index: 100;
@@ -89,7 +89,7 @@ nav{
     display: block;
 }
 .nav-links a:hover{
-    background-color: rgba(107, 152, 203, 0.769);;
+    background-color: rgba(188, 212, 239, 0.769);
     cursor: pointer;
 }
 /* Show menu when the checkbox is checked */
@@ -110,7 +110,7 @@ nav{
 }
 .search-bar{
     display: flex;
-    align-self: right;
+    align-self: center;
     align-items: center;
     border-left: 0.6rem;
     padding: 0.6rem;
@@ -290,7 +290,7 @@ footer div::before{
         width: 100%;
     }
     .search-bar{
-        align-self: right;
+        align-self: center;
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }

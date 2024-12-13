@@ -2,56 +2,56 @@
     {
         "category": "Analgesics",
         "items": [
-            {"name": "Paracetamol", "price": 20, "image": "./Images/Medicines/paracetamol.webp"},
-            {"name": "Ibuprofen", "price": 50, "image": "./Images/Medicines/ibuprofen.webp"},
-            {"name": "Aspirin", "price": 30, "image": "./Images/Medicines/aspirin.webp"},
-            {"name": "Diclofenac", "price": 40, "image": "./Images/Medicines/diclofenac.webp"},
-            {"name": "Naproxen", "price": 45, "image": "./Images/Medicines/naproxen.webp"},
-            {"name": "Ketorolac", "price": 60, "image": "./Images/Medicines/ketorolac.webp"}
+            {"name": "Paracetamol", "price": 5, "image": "./Images/Medicines/paracetamol.webp"},
+            {"name": "Ibuprofen", "price": 5, "image": "./Images/Medicines/ibuprofen.webp"},
+            {"name": "Aspirin", "price": 3, "image": "./Images/Medicines/aspirin.webp"},
+            {"name": "Diclofenac", "price": 4, "image": "./Images/Medicines/diclofenac.webp"},
+            {"name": "Naproxen", "price": 4.5, "image": "./Images/Medicines/naproxen.webp"},
+            {"name": "Ketorolac", "price": 6, "image": "./Images/Medicines/ketorolac.webp"}
         ]
     },
     {
         "category": "Antibiotics",
         "items": [
-            {"name": "Amoxicillin", "price": 150, "image": "./Images/Medicines/amoxicillin.webp"},
-            {"name": "Ciprofloxacin", "price": 200, "image": "./Images/Medicines/ciprofloxacin.webp"},
-            {"name": "Azithromycin", "price": 300, "image": "./Images/Medicines/azithromycin.webp"},
-            {"name": "Doxycycline", "price": 250, "image": "./Images/Medicines/doxycycline.webp"},
-            {"name": "Cephalexin", "price": 180, "image": "./Images/Medicines/cephalexin.webp"},
-            {"name": "Metronidazole", "price": 220, "image": "./Images/Medicines/metronidazole.webp"}
+            {"name": "Amoxicillin", "price": 15, "image": "./Images/Medicines/amoxicillin.webp"},
+            {"name": "Ciprofloxacin", "price": 20, "image": "./Images/Medicines/ciprofloxacin.webp"},
+            {"name": "Azithromycin", "price": 30, "image": "./Images/Medicines/azithromycin.webp"},
+            {"name": "Doxycycline", "price": 25, "image": "./Images/Medicines/doxycycline.webp"},
+            {"name": "Cephalexin", "price": 18, "image": "./Images/Medicines/cephalexin.webp"},
+            {"name": "Metronidazole", "price": 22, "image": "./Images/Medicines/metronidazole.webp"}
         ]
     },
     {
         "category": "Antidepressants",
         "items": [
-            {"name": "Fluoxetine", "price": 400, "image": "./Images/Medicines/fluoxetine.webp"},
-            {"name": "Sertraline", "price": 500, "image": "./Images/Medicines/sertraline.webp"},
-            {"name": "Paroxetine", "price": 450, "image": "./Images/Medicines/paroxetine.webp"},
-            {"name": "Venlafaxine", "price": 550, "image": "./Images/Medicines/venlafaxine.webp"},
-            {"name": "Citalopram", "price": 480, "image": "./Images/Medicines/citalopram.webp"},
-            {"name": "Bupropion", "price": 600, "image": "./Images/Medicines/bupropion.webp"}
+            {"name": "Fluoxetine", "price": 40, "image": "./Images/Medicines/fluoxetine.webp"},
+            {"name": "Sertraline", "price": 50, "image": "./Images/Medicines/sertraline.webp"},
+            {"name": "Paroxetine", "price": 45, "image": "./Images/Medicines/paroxetine.webp"},
+            {"name": "Venlafaxine", "price": 55, "image": "./Images/Medicines/venlafaxine.webp"},
+            {"name": "Citalopram", "price": 48, "image": "./Images/Medicines/citalopram.webp"},
+            {"name": "Bupropion", "price": 60, "image": "./Images/Medicines/bupropion.webp"}
         ]
     },
     {
         "category": "Antihistamines",
         "items": [
-            {"name": "Loratadine", "price": 80, "image": "./Images/Medicines/loratadine.webp"},
-            {"name": "Cetirizine", "price": 90, "image": "./Images/Medicines/cetirizine.webp"},
-            {"name": "Fexofenadine", "price": 100, "image": "./Images/Medicines/fexofenadine.webp"},
-            {"name": "Diphenhydramine", "price": 70, "image": "./Images/Medicines/diphenhydramine.webp"},
-            {"name": "Chlorpheniramine", "price": 60, "image": "./Images/Medicines/chlorpheniramine.webp"},
-            {"name": "Levocetirizine", "price": 85, "image": "./Images/Medicines/levocetirizine.webp"}
+            {"name": "Loratadine", "price": 8, "image": "./Images/Medicines/loratadine.webp"},
+            {"name": "Cetirizine", "price": 9, "image": "./Images/Medicines/cetirizine.webp"},
+            {"name": "Fexofenadine", "price": 10, "image": "./Images/Medicines/fexofenadine.webp"},
+            {"name": "Diphenhydramine", "price": 7, "image": "./Images/Medicines/diphenhydramine.webp"},
+            {"name": "Chlorpheniramine", "price": 6, "image": "./Images/Medicines/chlorpheniramine.webp"},
+            {"name": "Levocetirizine", "price": 8.5, "image": "./Images/Medicines/levocetirizine.webp"}
         ]
     },
     {
         "category": "Antihypertensives",
         "items": [
-            {"name": "Amlodipine", "price": 300, "image": "./Images/Medicines/amlodipine.webp"},
-            {"name": "Lisinopril", "price": 350, "image": "./Images/Medicines/lisinopril.webp"},
-            {"name": "Losartan", "price": 320, "image": "./Images/Medicines/losartan.webp"},
-            {"name": "Metoprolol", "price": 340, "image": "./Images/Medicines/metoprolol.webp"},
-            {"name": "Hydrochlorothiazide", "price": 280, "image": "./Images/Medicines/hydrochlorothiazide.webp"},
-            {"name": "Atenolol", "price": 360, "image": "./Images/Medicines/atenolol.webp"}
+            {"name": "Amlodipine", "price": 30, "image": "./Images/Medicines/amlodipine.webp"},
+            {"name": "Lisinopril", "price": 35, "image": "./Images/Medicines/lisinopril.webp"},
+            {"name": "Losartan", "price": 32, "image": "./Images/Medicines/losartan.webp"},
+            {"name": "Metoprolol", "price": 34, "image": "./Images/Medicines/metoprolol.webp"},
+            {"name": "Hydrochlorothiazide", "price": 28, "image": "./Images/Medicines/hydrochlorothiazide.webp"},
+            {"name": "Atenolol", "price": 36, "image": "./Images/Medicines/atenolol.webp"}
         ]
     }
 ]

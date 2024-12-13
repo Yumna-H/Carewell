@@ -5,7 +5,7 @@ p{
     padding: 10px;
 }
 .intro {
-    background-image: url('../Images/Mainimage.jpg');
+    background-image: url('../Images/Mainimage.webp');
     background-size: cover;
     background-position: center;
     padding: 2rem 2rem;
@@ -40,16 +40,15 @@ p{
     margin: 1rem;
     box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
 }
-#img{
+.img{
     width: 100%;
     height: auto;
-    box-shadow: 1px solid rgba(0, 0, 0, 0.1);
     align-self: center;
     justify-self: center;
     padding: 1rem;
     overflow: hidden;
 }
-h2{
+.doctors-intro h2{
     background-color: var(--h-color);
     padding: 1rem;
     margin: 1rem;
@@ -64,20 +63,34 @@ h2{
 ul, ol{
     line-height: 1.8;
 }
-
 /* Services Page */
-.services-page{
+.services-page {
     padding: 10px;
     margin: 10px;
 }
-.services-intro{
-    display: flex;
+.services-intro {
     background-color: #7da3fd;
     padding: 1rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-.services-info{
+.services-intro h2 {
+    color: var(--color); 
+    text-align: center; 
+    margin-top: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+.services-intro p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+.services-info {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -85,48 +98,49 @@ ul, ol{
     gap: 1.5rem;
     margin-top: 20px;
 }
-.service{
+.service {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0.6rem;
     padding: 15px;
     background-color: lightskyblue;
-    overflow: hidden;
     width: 300px;
-    border-radius: 2px;
-    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.145);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
 }
-.service h3{
+.service h3 {
     font-size: 1.5rem;
     color: white;
     background-color: rgba(0, 0, 0, 0.218);
-    padding: 10px 15px; 
+    padding: 10px 15px;
     border-radius: 5px;
-    text-align: center;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     width: 100%;
 }
-.service img{
+.service img {
     width: 100%;
     height: auto;
+    border-radius: 5px;
     object-fit: cover;
 }
-/* Registration button styling */
 .registration {
     text-align: center;
 }
 .registration button {
-    background-color: var(--color);
-    padding: 10px 20px;
+    background-color: var(--primary-color-dark);
+    padding: 1rem;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
     text-align: center;
+    width: 80vw;
+    align-self: center;
     margin: 20px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
-
 .registration button a {
     color: white;
     text-decoration: none;
@@ -162,7 +176,7 @@ ul, ol{
     animation: none;
 }
 .doctors-list div{
-    text-align: cnter;
+    text-align: center;
     padding: 15px;
     border-radius: 10px;
     background-color: rgba(115, 179, 221, 0.226);
@@ -192,17 +206,14 @@ ul, ol{
     }
     to{
         transform: scale(1.1);
-    }
-}
+    }}
 .doctors-list div:hover {
     animation: enlarge 0.3s ease forwards;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-
 @media screen and (min-width:728px) and (max-width:1024px){
     /* Home Page */
-    #img{
+    .img{
         width:45%;
         height: auto;
         padding: 0.6rem;
@@ -286,11 +297,9 @@ ul, ol{
     .doctors-list img{
         width: 40%;
         height: auto;
-    }
-}
-
+    }}
 @media screen and (min-width: 1024px){
-    #img{
+    .img{
         width: 30%;
         height: auto;
     }
@@ -346,7 +355,7 @@ ul, ol{
     }
     .registration button {
         padding: 8px 16px;
-        font-size: 1.1rem;
+        font-size: 1.4rem;
     }
     /* Doctors Page */
     .doctors-intro h1 {
@@ -369,5 +378,4 @@ ul, ol{
     .doctors-list img{
         width: 40%;
         height: auto;
-    }
-}
+    }}

@@ -3,24 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="CSS Style/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Css Style/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="CSS Style/favicon/favicon-16x16.png">
-    <link rel="manifest" href="CSS Style/manifest.json">
-    <link rel="mask-icon" href="CSS Syle/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="apple-mobile-web-app-title" content="Carewell Hospital">
-    <meta name="application-name" content="Carewell Hospital">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="./CSS Style/Main.css">
-    <link rel="stylesheet" href="./CSS Style/Checkout.css">
-    <title>Checkout  - Carewell Hospital</title>
+    <link rel="stylesheet" href="./Styles/Main.css">
+    <link rel="stylesheet" href="./Styles/Checkout.css">
+    <title>Carewell Hospital Checkout - Complete Your Purchase</title>
 </head>
 <body>
     <header>
         <nav>
             <div class="menu">
-                <img src="Images/Logo1.png" alt="carewell's logo" class="logo">
+                <img src="Images/Logo1.webp" alt="carewell's logo" class="logo">
             </div>
         </nav>
     </header>
@@ -28,8 +19,7 @@
         <form id="order-form" class="order-form">
             <h2>Order Details</h2>
         
-            <!-- Personal Details Card -->
-            <div class="card personal-details">
+            <div class="card-personal-details">
                 <h2>Personal Details</h2>
                 <label for="full-name">Full Name</label>
                 <input type="text" id="full-name" name="full-name" placeholder="Enter full name" required>
@@ -45,7 +35,7 @@
             </div>
         
             <!-- Delivery Method Card -->
-            <div class="card delivery-method">
+            <div class="card-delivery-method">
                 <h2>Delivery Method</h2>
                 <label>
                     <input type="radio" name="delivery-method" value="pickup" id="pickup" required>
@@ -76,7 +66,7 @@
             </div>
             
             <!-- Payment Method Card -->
-            <div class="card payment-method">
+            <div class="card-payment-method">
                 <h2>Payment Method</h2>
                 <label>
                     <input type="radio" name="payment-method" value="card" id="payment-card" required>
@@ -93,14 +83,14 @@
                     <input type="number" id="card-number" name="card-number" required>
         
                     <label for="expiry-date">Expiry Date</label>
-                    <input type="month" id="expiry-date" name="expiry-date" placeholder="MM/YY" min="2025-01" required>
+                    <input type="month" id="expiry-date" name="expiry-date" min="2025-01" required>
+                    <span class="placeholder">MM/YY</span>
         
                     <label for="cvv">CVV</label>
                     <input type="number" id="cvv" name="cvv" required>
                 </div>
             </div>
 
-            <!-- Order Summary Table -->
             <div id="order-summary">
                 <table id="summary-table">
                     <thead>
@@ -112,7 +102,7 @@
                         </tr>
                     </thead>
                     <tbody id="summary-table-body">
-                        <!-- Dynamically filled with order items -->
+
                     </tbody>
                 </table>
         

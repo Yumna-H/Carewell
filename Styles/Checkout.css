@@ -6,7 +6,9 @@ form {
     align-self: start;
 }
 
-.card {
+.card-personal-details, 
+.card-delivery-method,
+.card-payment-method {
     margin-bottom: 20px;
     padding: 15px;
     border: 1px solid #cbefff;
@@ -15,16 +17,18 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Title Styles */
-h2 {
+h2{
     font-size: 1.5em;
     color: var(--color);
     margin-bottom: 15px;
     text-align: left; 
     position: relative;
+}
+
+.card-personal-details h2 {
     border-bottom: 3px solid var(--color);
 }   
-/* Label Styles */
+
 label {
     display: block;
     margin: 10px 0 5px;
@@ -110,6 +114,8 @@ input[type="radio"]:checked {
     font-weight: bold;
     text-align: right;
     margin-top: 10px;
+    margin-bottom: 1rem;
+    color: #4471d2;
 }
 
 /* Mobile View (Default) */
@@ -134,7 +140,7 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -150,12 +156,12 @@ button:active {
 /* Receipt Section */
 .payment-confirmation {
     width: 90%;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f4f7f6;
+    background-color: var(--primary-color);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
 }
@@ -176,13 +182,13 @@ button:active {
 .payment-confirmation table th,
 .payment-confirmation table td {
     padding: 12px 10px;
-    border: 1px solid #ddd;
+    border: 2px solid rgba(124, 167, 215, 0.769);
     text-align: left;
-    font-size: 0.95em;
+    font-size: 1rem;
 }
 
 .payment-confirmation table th {
-    background-color: #eaf1ff;
+    background-color: var(--h-color);
     color: var(--color);
 }
 
@@ -196,6 +202,7 @@ button:active {
 
 .payment-confirmation button {
     display: block;
+    font-size: 1.5rem;
     margin: 20px auto;
     padding: 10px 20px;
     background-color: var(--primary-color-dark);
@@ -292,7 +299,7 @@ button:active {
     }
 
     .grand-total {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 }
 

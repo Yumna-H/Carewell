@@ -60,8 +60,13 @@ grandTotalElement.textContent = `LKR ${grandTotal.toFixed(2)}`;
         const deliveryMethod = document.querySelector("input[name='delivery-method']:checked")?.value;
         const paymentMethod = document.querySelector("input[name='payment-method']:checked")?.value;
 
-        if (!fullName || !email || !phone || isNaN(age) || age < 18) {
-            alert("Please fill all required fields and ensure age is 18 or above.");
+        if (!fullName || !email || !phone || isNaN(age)) {
+            alert("Please fill all required fields");
+            return;
+        }
+        
+        if (age < 18){
+            alert("Please ensure age is 18 or above");
             return;
         }
 
@@ -80,8 +85,8 @@ grandTotalElement.textContent = `LKR ${grandTotal.toFixed(2)}`;
             const expiryDate = document.getElementById("expiry-date").value.trim();
             const cvv = document.getElementById("cvv").value.trim();
 
-            if (cardNumber.length !== 16 || !/^\d+$/.test(cardNumber)) {
-                alert("Card number must be a 16-digit number.");
+            if (cardNumber.length !== 16 || !/^\d{16}$/.test(cardNumber)) {
+                alert("Card number must be a 16-digit number without spaces.");
                 return;
             }
 
@@ -105,55 +110,56 @@ grandTotalElement.textContent = `LKR ${grandTotal.toFixed(2)}`;
 
         // Create receipt HTML
         const receiptHTML = `
-            <div class="payment-confirmation">
-                <h2>Payment Confirmation</h2>
-                <h3>Personal Details</h3>
-                <table>
-                    <tr><th>Name</th><td>${fullName}</td></tr>
-                    <tr><th>Email</th><td>${email}</td></tr>
-                    <tr><th>Phone</th><td>${phone}</td></tr>
-                </table>
-                <h3>Payment Method</h3>
-                <table>
-                    <tr><th>Method</th><td>${paymentMethod}</td></tr>
-                    ${paymentMethod === 'card' ? `
-                        <tr><th>Card Number</th><td>${document.getElementById("card-number").value}</td></tr>
-                        <tr><th>Expiry Date</th><td>${document.getElementById("expiry-date").value}</td></tr>
-                    ` : ''}
-                </table>
-                <h3>Delivery Method</h3>
-                <table>
-                    <tr><th>Method</th><td>${deliveryMethod}</td></tr>
-                    ${deliveryMethod === 'delivery' ? `<tr><th>Address</th><td>${document.getElementById("address").value}</td></tr>` : ''}
-                </table>
-                <h3>Order Summary</h3>
-                <table class="summary-table">
-                    <thead>
-                        <tr>
-                            <th>Item</th>
-                            <th>Qty</th>
-                            <th>Price</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${cart.map(item => `
-                            <tr>
-                                <td>${item.name}</td>
-                                <td>${item.qty}</td>
-                                <td>LKR ${item.price.toFixed(2)}</td>
-                                <td>LKR ${(item.price * item.qty).toFixed(2)}</td>
-                            </tr>
-                        `).join('')}
-                        <tr>
-                            <td colspan="3"><strong>Total</strong></td>
-                            <td><strong>LKR ${grandTotal.toFixed(2)}</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p class="message">Thank you for purchasing from Carewell's Online Pharmacy. Your order will be delivered on ${formattedDate}!</p>
-                <button id="back-to-pharmacy-button">Return to Pharmacy</button>
-            </div>
+        <div class="payment-confirmation">
+            <h2>Payment Confirmation</h2>
+            <h3>Personal Details</h3>
+            <table>
+            <tr><th>Name</th><td>${fullName}</td></tr>
+            <tr><th>Age</th><td>${age}</td></tr>
+            <tr><th>Email</th><td>${email}</td></tr>
+            <tr><th>Phone</th><td>${phone}</td></tr>
+            </table>
+            <h3>Payment Method</h3>
+            <table>
+            <tr><th>Method</th><td>${paymentMethod.charAt(0).toUpperCase() + paymentMethod.slice(1)}</td></tr>
+            ${paymentMethod === 'card' ? `
+                <tr><th>Card Number</th><td>${document.getElementById("card-number").value}</td></tr>
+                <tr><th>Expiry Date</th><td>${document.getElementById("expiry-date").value}</td></tr>
+            ` : ''}
+            </table>
+            <h3>Delivery Method</h3>
+            <table>
+            <tr><th>Method</th><td>${deliveryMethod.charAt(0).toUpperCase() + deliveryMethod.slice(1)}</td></tr>
+            ${deliveryMethod === 'delivery' ? `<tr><th>Address</th><td>${document.getElementById("address").value}</td></tr>` : ''}
+            </table>
+            <h3>Order Summary</h3>
+            <table class="summary-table">
+            <thead>
+                <tr>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${cart.map(item => `
+                <tr>
+                    <td>${item.name}</td>
+                    <td>${item.qty}</td>
+                    <td>LKR ${item.price.toFixed(2)}</td>
+                    <td>LKR ${(item.price * item.qty).toFixed(2)}</td>
+                </tr>
+                `).join('')}
+                <tr>
+                <td colspan="3"><strong>Total</strong></td>
+                <td><strong>LKR ${grandTotal.toFixed(2)}</strong></td>
+                </tr>
+            </tbody>
+            </table>
+            <p class="message">Thank you for purchasing from Carewell's Online Pharmacy. Your order will be delivered on ${formattedDate}!</p>
+            <button id="back-to-pharmacy-button">Return to Pharmacy</button>
+        </div>
         `;
 
         // Display receipt and redirect to pharmacy page
