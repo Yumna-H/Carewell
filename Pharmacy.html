@@ -39,7 +39,8 @@
                     </div>
                     <!-- Search Bar -->
                     <div class="search-bar">
-                        <input type="text" placeholder="Search">
+                        <label for="search-input" class="sr-only">Search</label> <!--The class sr-only hides the input and it is only visible to screen readers.-->
+                        <input type="text" id="search-input" placeholder="Search" aria-labelledby="search-input">
                         <button class="search-button">🔍</button>
                     </div>
                 </div>
@@ -71,12 +72,15 @@
                     </tr>
                 </tfoot>
             </table>
-            <button id="save-favorites">Add to Favorites</button>
-            <button id="apply-favorites">Apply Favorites</button>
-            <button id="buy-now">Buy Now</button>
-        </section>       
-        <script src="./JSON/Medicines.json"></script>
-        <script src="./Scripts/Pharmacy.js" defer></script>
+            <div class="button-container">
+                <button id="save-favorites">Add to Favorites</button>
+                <button id="apply-favorites">Apply Favorites</button>
+                <button id="buy-now">Buy Now</button>
+            </div>
+        </section>
+        
+    <script src="./JSON/Medicines.json" async></script>
+    <script src="./Scripts/Pharmacy.js" defer></script>       
     </main>
     <footer>
         <div class="footer">

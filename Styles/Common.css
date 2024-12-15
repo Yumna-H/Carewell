@@ -79,7 +79,7 @@ ul, ol{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .services-intro h2 {
-    color: var(--color); 
+    color: #3552a9; 
     text-align: center; 
     margin-top: 20px;
     font-size: 1.8em;
@@ -143,6 +143,7 @@ ul, ol{
 }
 .registration button a {
     color: white;
+    font-weight: bold;
     text-decoration: none;
 }
 /* Doctors Page */

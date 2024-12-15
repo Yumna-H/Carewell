@@ -39,7 +39,8 @@
                     </div>
                     <!-- Search Bar -->
                     <div class="search-bar">
-                        <input type="text" placeholder="Search" id="search">
+                        <label for="search-input" class="sr-only">Search</label> <!--The class sr-only hides the input and it is only visible to screen readers.-->
+                        <input type="text" id="search-input" placeholder="Search" aria-labelledby="search-input">
                         <button class="search-button">🔍</button>
                     </div>
                 </div>

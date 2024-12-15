@@ -1,11 +1,9 @@
-/* Form and Cards */
 form {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
     padding: 15px;
-    justify-self: center;
-    align-self: start;
+    box-sizing: border-box;
 }
-
 .card-personal-details, 
 .card-delivery-method,
 .card-payment-method {
@@ -13,22 +11,19 @@ form {
     padding: 15px;
     border: 1px solid #cbefff;
     border-radius: 8px;
-    background-color:  #e1f1ff;
+    background-color: #e1f1ff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-h2{
+h2 {
     font-size: 1.5em;
     color: var(--color);
     margin-bottom: 15px;
     text-align: left; 
     position: relative;
 }
-
 .card-personal-details h2 {
     border-bottom: 3px solid var(--color);
-}   
-
+}
 label {
     display: block;
     margin: 10px 0 5px;
@@ -36,8 +31,6 @@ label {
     font-size: var(--font-size);
     color: var(--color);
 }
-
-/* Input and Textarea Styles */
 input[type="text"],
 input[type="number"],
 input[type="month"],
@@ -45,15 +38,14 @@ input[type="email"],
 input[type="tel"],
 input[type="password"],
 textarea {
-    width: 100%;
-    padding: 8px;
+    width: calc(100% - 20px); /* Reducing the input field width slightly */
+    padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    box-sizing: border-box;
 }
-
-/* Focus Styles for Inputs */
 input[type="text"]:focus,
 input[type="number"]:focus,
 input[type="month"]:focus,
@@ -63,52 +55,43 @@ input[type="password"]:focus,
 textarea:focus {
     border-color: var(--primary-color-dark);
 }
-
-/* Placeholder Styles */
 input::placeholder,
 textarea::placeholder {
     color: #aaa;
     font-style: italic;
 }
-
-/* Radio Buttons */
 input[type="radio"] {
     margin-right: 10px;
 }
-
 input[type="radio"]:checked {
     accent-color: var(--primary-color-dark);
 }
-
-/* Order Summary Table */
 #order-summary {
     margin-top: 20px;
 }
-
 #summary-table {
     width: 100%;
+    padding: 10px;
     border-collapse: collapse;
     margin-bottom: 20px;
+    overflow-x: auto; 
 }
-
 #summary-table th,
 #summary-table td {
     border: 1px solid var(--color);
-    padding: 1rem;
+    padding: 8px;
     text-align: center;
 }
-
 #summary-table th {
     background-color: var(--h-color);
     color: #000000;
+    font-size: 1rem;
 }
-
 #summary-table tfoot td {
     font-weight: bold;
     background-color: var(--primary-color-dark);
     color: #000000;
 }
-
 .grand-total {
     font-size: 1.2rem;
     font-weight: bold;
@@ -117,45 +100,27 @@ input[type="radio"]:checked {
     margin-bottom: 1rem;
     color: #4471d2;
 }
-
-/* Mobile View (Default) */
-#summary-table th,
-#summary-table td {
-    padding: 10px;
-}
-
-#summary-table th {
-    font-size: 1rem;
-}
-
-#summary-table td {
-    font-size: 0.9rem;
-}
-
-/* Buttons */
 button {
     width: 100%;
     padding: 12px;
     background-color: var(--primary-color-dark);
     color: white;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 button:hover {
     background-color: var(--h-color);
 }
-
 button:active {
     background-color: #4471d2;
 }
-
 /* Receipt Section */
 .payment-confirmation {
-    width: 90%;
+    width: 95%;
     max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
@@ -165,20 +130,18 @@ button:active {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
 }
-
 .payment-confirmation h2,
 .payment-confirmation h3 {
     color: var(--color);
     margin-bottom: 15px;
     text-align: left;
 }
-
 .payment-confirmation table {
     width: 100%;
     margin-bottom: 20px;
     border-collapse: collapse;
+    overflow-x: auto;  /* Ensure the table doesn't overflow on small screens */
 }
-
 .payment-confirmation table th,
 .payment-confirmation table td {
     padding: 12px 10px;
@@ -186,12 +149,10 @@ button:active {
     text-align: left;
     font-size: 1rem;
 }
-
 .payment-confirmation table th {
     background-color: var(--h-color);
     color: var(--color);
 }
-
 .payment-confirmation .message {
     margin-top: 20px;
     font-size: 1.2em;
@@ -199,7 +160,6 @@ button:active {
     text-align: center;
     font-weight: bold;
 }
-
 .payment-confirmation button {
     display: block;
     font-size: 1.5rem;
@@ -209,27 +169,21 @@ button:active {
     color: #fff;
     border: none;
     border-radius: 4px;
-    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 .payment-confirmation button:hover {
     background-color: var(--primary-color-dark);
 }
 
 @media (min-width: 728px) and (max-width: 1024px) {
     form {
-        width: 90vw;
+        width: 90%;
         padding: 20px;
-        justify-self: center;
-        align-self: center;
     }
-
     .card {
         padding: 18px;
     }
-
     input[type="text"],
     input[type="email"],
     input[type="tel"],
@@ -237,24 +191,19 @@ button:active {
     textarea {
         padding: 10px;
     }
-
     button {
         padding: 12px;
     }
-
     #summary-table th,
     #summary-table td {
         padding: 12px;
     }
-
     #summary-table th {
         font-size: 1.1rem;
     }
-
     #summary-table td {
         font-size: 1rem;
     }
-
     .grand-total {
         font-size: 1.4rem;
     }
@@ -262,17 +211,13 @@ button:active {
 
 @media (min-width: 1024px) {
     form {
-        width: 80vw;
+        width: 80%;
         padding: 25px;
-        justify-self: center;
-        align-self: start;
     }
-
     .card {
         padding: 20px;
         margin: 1rem;
     }
-
     input[type="text"],
     input[type="email"],
     input[type="tel"],
@@ -280,26 +225,20 @@ button:active {
     textarea {
         padding: 12px;
     }
-
     button {
         padding: 15px;
     }
-
     #summary-table th,
     #summary-table td {
         padding: 15px;
     }
-
     #summary-table th {
         font-size: 1.2rem;
     }
-
     #summary-table td {
         font-size: 1.1rem;
     }
-
     .grand-total {
         font-size: 1.3rem;
     }
 }
-

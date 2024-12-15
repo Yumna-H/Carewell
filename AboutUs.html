@@ -39,7 +39,8 @@
                     </div>
                     <!-- Search Bar -->
                     <div class="search-bar">
-                        <input type="text" placeholder="Search">
+                        <label for="search-input" class="sr-only">Search</label> <!--The class sr-only hides the input and it is only visible to screen readers.-->
+                        <input type="text" id="search-input" placeholder="Search" aria-labelledby="search-input">
                         <button class="search-button">🔍</button>
                     </div>
                 </div>
@@ -51,19 +52,19 @@
             <h2>Our Branches</h2>
             <div class="branch">
                 <h3>Main Branch: Downtown Hospital</h3>
-                <img src="Images/Hospitalmain.jpeg" alt="Hospital Main Branch" class="hospital">
+                <img src="Images/Hospitalmain.webp" alt="Hospital Main Branch" class="hospital">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0163186241143!2d79.8746113!3d6.8886483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a2d53bc7337%3A0xeb844e84cc4343f5!2s323%20Park%20Rd%2C%20Colombo%2000500!5e0!3m2!1sen!2slk!4v1725118504993!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <p><b>Description:</b> The central facility offering a full range of medical services, including emergency care, surgery, and specialized treatments.</p>
             </div>
             <div class="branch">
                 <h3>Uptown Clinic</h3>
-                <img src="Images/branch2.jpg" alt="Uptown Clinic" class="hospital">
+                <img src="Images/branch2.webp" alt="Uptown Clinic" class="hospital">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1860.625778553231!2d79.85257000640638!3d6.915806620555373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596a47632c45%3A0x37341bc4ba9fc0fa!2sStanley%20Jansz%20Grounds%2C%20Alwis%20Pl%2C%20Colombo!5e0!3m2!1sen!2slk!4v1725899013607!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <p><b>Description:</b> Provides outpatient services, including routine check-ups, minor procedures, and follow-up care. Focuses on community health and preventive care.</p>
             </div>
             <div class="branch">
                 <h3>Southside Urgent Care</h3>
-                <img src="Images/branch3.jpg" alt="Southside Clinic" class="hospital">
+                <img src="Images/branch3.webp" alt="Southside Clinic" class="hospital">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9186782833776!2d79.85561058066483!3d6.900328975305035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25962f7d422d5%3A0x3e037eb4c1305209!2sColombo%20University%20Playground%2C%20Colombo%2000700!5e0!3m2!1sen!2slk!4v1725899160738!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <p><b>Description:</b> Offers urgent medical care for non-life-threatening conditions. Open extended hours for quick, convenient treatment.</p>
             </div>

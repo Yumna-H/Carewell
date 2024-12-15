@@ -39,7 +39,8 @@
                     </div>
                     <!-- Search Bar -->
                     <div class="search-bar">
-                        <input type="text" placeholder="Search">
+                        <label for="search-input" class="sr-only">Search</label> <!--The class sr-only hides the input and it is only visible to screen readers.-->
+                        <input type="text" id="search-input" placeholder="Search" aria-labelledby="search-input">
                         <button class="search-button">🔍</button>
                     </div>
                 </div>
@@ -53,31 +54,38 @@
                 <form>
                     <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name" required><br>
+    
                     <label for="tel">Phone Number:</label><br>
                     <input type="tel" maxlength="10" id="tel" name="tel" required><br>
+    
                     <label for="email">E-mail:</label><br>
-                    <input type="text" id="email" name="email" required><br>
+                    <input type="email" id="email" name="email" required><br>
+    
                     <label for="date">Date:</label><br>
                     <input type="date" id="date" name="date" required><br>
-                    <label for="name">Doctor Name:</label><br>
+    
+                    <label for="doctor">Doctor Name:</label><br>
                     <input type="text" id="doctor" name="doctor" required><br>
+    
                     <label for="specialization">Specialization:</label><br>
                     <select id="specialization" name="specialization" required>
                         <option value="" disabled selected>Select Specialization</option>
                         <option value="general">General Medicine</option>
                         <option value="orthopedic">Orthopedic</option>
-                        <option value="obstestric">Obstetrics and Gynoclogy</option>
-                        <option value="pediatric">Pediatric</option>
+                        <option value="obstetrics">Obstetrics and Gynecology</option>
+                        <option value="pediatric">Pediatrics</option>
                         <option value="oncology">Oncology</option>
                         <option value="neurology">Neurology</option>
-                    </select>
+                    </select><br>
+    
                     <label for="branch">Hospital Branch:</label><br>
                     <select id="branch" name="branch" required>
                         <option value="" disabled selected>Select Branch</option>
                         <option>Downtown</option>
                         <option>Uptown</option>
                         <option>Southside</option>
-                    </select>
+                    </select><br>
+    
                     <button type="submit" class="submit">Submit</button>
                     <button type="reset" class="reset">Reset</button>
                 </form>

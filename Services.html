@@ -39,7 +39,8 @@
                     </div>
                     <!-- Search Bar -->
                     <div class="search-bar">
-                        <input type="text" placeholder="Search">
+                        <label for="search-input" class="sr-only">Search</label> <!--The class sr-only hides the input and it is only visible to screen readers.-->
+                        <input type="text" id="search-input" placeholder="Search" aria-labelledby="search-input">
                         <button class="search-button">🔍</button>
                     </div>
                 </div>
@@ -57,7 +58,7 @@
                 <h3>General physician</h3>
             </div>
             <div class="service">
-                <img src="Images/orthopedic.jpg" alt="Image of an orthopedic surgeon">
+                <img src="Images/orthopedic.webp" alt="Image of an orthopedic surgeon">
                 <h3>Orthopedics</h3>
             </div>
             <div class="service">
@@ -69,16 +70,16 @@
                 <h3>Pediatric</h3>
             </div>
             <div class="service">
-                <img src="Images/oncology.jpg" alt="Image of oncologist">
+                <img src="Images/oncology.webp" alt="Image of oncologist">
                 <h3>Oncology</h3>
             </div>
             <div class="service">
-                <img src="Images/neurology.jpg" alt="Image of neurologist">
+                <img src="Images/neurology.webp" alt="Image of neurologist">
                 <h3>Neurology</h3>
             </div>
         </section>
         <div class="registration">
-            <button type="menu"><a href="Reservations.html">Registration</a></button>
+            <button type="button"><a href="Reservations.html">Registration</a></button>
         </div>
     </main>
     <footer>

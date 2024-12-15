@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styles/Main.css">
     <link rel="stylesheet" href="./Styles/Checkout.css">
-    <title>Carewell Hospital Checkout - Complete Your Purchase</title>
+    <title>Checkout - Carewell Hospital</title>
 </head>
 <body>
     <header>
@@ -22,16 +22,16 @@
             <div class="card-personal-details">
                 <h2>Personal Details</h2>
                 <label for="full-name">Full Name</label>
-                <input type="text" id="full-name" name="full-name" placeholder="Enter full name" required>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter full name (e.g.: Emma Styles)" required>
         
                 <label for="age">Age</label>
                 <input type="number" id="age" name="age" placeholder="Enter your age" min="18" required>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required>
         
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" maxlength="10" required>
+                <input type="tel" id="phone" name="phone" placeholder="Enter phone number (e.g: 0770000000)" maxlength="10" required>
             </div>
         
             <!-- Delivery Method Card -->
@@ -49,19 +49,19 @@
                 <!-- Delivery Details -->
                 <div id="delivery-address" class="address-fields">
                     <label for="address">Street Address</label>
-                    <input type="text" id="address" name="address">
-        
+                    <input type="text" id="address" name="address" placeholder="Enter your street address (e.g.: 123 Main St)">
+                    
                     <label for="city">City</label>
-                    <input type="text" id="city" name="city">
-        
+                    <input type="text" id="city" name="city" placeholder="Enter your city (e.g.: Colombo)">
+                    
                     <label for="zipcode">Postal Code/ZIP</label>
-                    <input type="text" id="zipcode" name="zipcode">
-        
+                    <input type="text" id="zipcode" name="zipcode" placeholder="Enter postal code or ZIP (e.g.: 00001)">
+                    
                     <label for="country">Country/State</label>
-                    <input type="text" id="country" name="country">
-        
+                    <input type="text" id="country" name="country" placeholder="Enter your country or state (e.g.: SL)">
+                    
                     <label for="additional-details">Additional Details</label>
-                    <textarea name="additional-details" id="additional-details" cols="60" rows="5"></textarea>
+                    <textarea name="additional-details" id="additional-details" cols="60" rows="5" placeholder="Enter any additional details (e.g.: apartment number, special instructions)"></textarea>
                 </div>
             </div>
             
@@ -80,14 +80,14 @@
                 <!-- Card Details -->
                 <div id="card-details" class="details-card">
                     <label for="card-number">Card Number</label>
-                    <input type="number" id="card-number" name="card-number" required>
+                    <input type="number" id="card-number" name="card-number" placeholder="1234-5678-9123-4567" required>
         
                     <label for="expiry-date">Expiry Date</label>
                     <input type="month" id="expiry-date" name="expiry-date" min="2025-01" required>
                     <span class="placeholder">MM/YY</span>
         
                     <label for="cvv">CVV</label>
-                    <input type="number" id="cvv" name="cvv" required>
+                    <input type="number" id="cvv" name="cvv" placeholder="123" required>
                 </div>
             </div>
 

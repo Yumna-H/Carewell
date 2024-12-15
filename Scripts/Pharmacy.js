@@ -40,18 +40,29 @@ function renderMedicines(data) {
             const medicineItemDiv = document.createElement('div');
             medicineItemDiv.classList.add('medicine-item');
 
+            const medicineQuantityId = `${item.name}-qty`;
+
             medicineItemDiv.innerHTML = `
                 <img src="${item.image}" alt="${item.name}" class="medicine-image">
-                <p class="medicine-name">${item.name}</p>
+                <h4 class="medicine-name">${item.name}</h4>
                 <p class="medicine-price">LKR ${item.price}</p>
-                <input type="number" min="1" value="1" id="${item.name}-qty" class="medicine-quantity">
+                <label for="${medicineQuantityId}" class="sr-only">Quantity</label>
+                <input type="number" min="1" value="1" id="${medicineQuantityId}" class="medicine-quantity" pattern="\d*">
                 <button class="add-to-cart-btn">Add to Cart</button>
             `;
+            // Add event listener for the 'input' event to validate quantity input
+            const qtyInput = medicineItemDiv.querySelector(`#${medicineQuantityId}`);
+            qtyInput.addEventListener('input', function() {
+                if (!/^\d+$/.test(qtyInput.value)) {
+                    alert('Please enter a valid number for quantity.');
+                    qtyInput.value = '';  // Clear invalid input
+                }
+            });
 
             // Add event listener for the 'Add to Cart' button
             const addToCartButton = medicineItemDiv.querySelector('.add-to-cart-btn');
             addToCartButton.addEventListener('click', () => {
-                addToCart(item.name, item.price, `${item.name}-qty`);
+                addToCart(item.name, item.price, medicineQuantityId);
             });
 
             medicineListDiv.appendChild(medicineItemDiv);
@@ -67,6 +78,7 @@ function renderMedicines(data) {
         medicineContainer.appendChild(categoryContainer);
     });
 }
+
 
 function addToCart(name, price, qtyInputId) {
     try {
@@ -150,27 +162,25 @@ function saveFavorites() {
 function applyFavorites() {
     try {
         const favorites = JSON.parse(localStorage.getItem('favorites'));
-        if (favorites) {
+        if (!favorites || favorites.length === 0) {
+            alert('No Favorites Saved!!');
+        } else {
             favorites.forEach(item => {
                 const existingItem = cart.find(cartItem => cartItem.name === item.name);
                 if (existingItem) {
                     existingItem.qty += item.qty;
-                }
-                else {
+                } else {
                     cart.push(item);
                 }
             });
             renderCart();
         }
-        else {
-            alert('No Favorites Saved!!');
-        }
-    }
-    catch (error) {
+    } catch (error) {
         console.error('Error applying favorites:', error);
         alert('An error has occurred while applying your favorites. Please try again...');
     }
 }
+
 
 function proceedToCheckout() {
     try {

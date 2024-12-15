@@ -1,176 +1,219 @@
-main {
-    padding: 1rem;
-}
-
-h1 {
-    color: var(--color);
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.category {
-    margin: 1.5rem;
-}
-
-.category-heading {
-    color: var(--color);
-    text-decoration: underline;
-    text-align: left;
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-}
-
-.medicine-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    padding: 1rem;
-    margin: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.medicine-item {
-    background-color: var(--primary-color);
-    border: 1px solid var(--h-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 95vw; 
-    text-align: center;
-    padding: 1.2rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.medicine-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.medicine-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-    padding: 1rem;
-}
-
-.medicine-name {
-    font-size: 1.3rem;
-    color: var(--color);
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.medicine-price {
-    color: var(--primary-color-dark);
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.medicine-quantity {
-    width: 100%; 
-    padding: 0.5rem; 
-    margin-bottom: 0.5rem;
-    text-align: center;
-    border: 1px solid var(--primary-color-dark);
-    border-radius: 7px;
-    display: inline-block; 
-}
-
-.add-to-cart-btn {
-    display: block; 
-    width: 100%;
-    background-color: var(--primary-color-dark);
-    color: #fff;
-    justify-self: center;
-    align-self: start;
-    padding: 0.7rem 1.2rem;
-    font-size: 1rem;
-    border: 1.5px solid var(--color);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 0.8rem; 
-}
-
-.add-to-cart-btn:hover {
-    background-color: var(--h-color);
-}
-
-/* Cart section styles */
-#cart {
-    margin-top: 2rem;
-    padding: 1rem;
-    background-color: #fff;
-    border: 1px solid var(--h-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#cart h2 {
-    color: var(--color);
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-table {
-    width: 90vw;
-    border-collapse: collapse;
-    margin-bottom: 1rem;
-}
-
-table th, table td {
-    border: 1px solid var(--h-color);
-    padding: 0.6rem;
-    text-align: center;
-}
-
-table th {
-    background-color: var(--primary-color-dark);
-    color: #fff;
-}
-
-table td {
-    background-color: var(--primary-color);
-}
-
-button {
-    background-color: var(--primary-color-dark);
-    color: #fff;
-    padding: 0.7rem 1.2rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-right: 0.5rem;
-    margin: 1rem;
-}
-
-button:hover {
-    background-color: var(--h-color);
-}
-
-/* Tablet screen styles */
-@media screen and (min-width: 728px) {
+    main {
+        padding: 1rem;
+    }
+    h1 {
+        color: var(--color);
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    .category {
+        margin: 1.5rem;
+    }
+    .category-heading {
+        color: var(--color);
+        text-decoration: underline;
+        text-align: left;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
     .medicine-list {
-        justify-content: flex-start;
-        gap: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        padding: 1rem;
+        margin: 0.5rem;
+        margin-bottom: 1rem;
     }
-
     .medicine-item {
-        width: calc(50% - 2rem); 
+        background-color: var(--primary-color);
+        border: 1px solid var(--h-color);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 95vw; 
+        text-align: center;
+        padding: 1.2rem;
+        transition: transform 0.3s, box-shadow 0.3s;
     }
-}
-
-/* Desktop screen styles */
-@media screen and (min-width: 1024px) {
-    .medicine-list {
-        justify-content: center;  
-        gap: 2rem;
+    .medicine-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     }
-
-    .medicine-item {
-        width: calc(25% - 2rem);  
+    .medicine-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+        padding: 1rem;
     }
-}
+    .medicine-name {
+        font-size: 1.3rem;
+        color: #2a48a0;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    .medicine-price {
+        color: var(--primary-color-dark);
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .medicine-quantity {
+        width: 100%; 
+        padding: 0.5rem; 
+        margin-bottom: 0.5rem;
+        text-align: center;
+        font-size: 1rem;
+        border: 1px solid var(--primary-color-dark);
+        border-radius: 7px;
+        display: inline-block; 
+    }
+    .add-to-cart-btn {
+        display: block; 
+        width: 100%;
+        background-color: var(--primary-color-dark);
+        color: #fff;
+        font-weight: bold;
+        justify-self: center;
+        align-self: start;
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+        border: 1.5px solid var(--color);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 0.8rem; 
+    }
+    .add-to-cart-btn:hover {
+        background-color: var(--h-color);
+    }
+    /* Cart section styles */
+    #cart {
+        width: 90%; 
+        margin: 2rem auto;
+        padding: 1rem;
+        background-color: #fff;
+        border: 1px solid var(--h-color);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center; 
+        overflow: auto;
+        font-size: 1rem;
+    }
+    #cart h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: var(--color);
+        font-weight: bold;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1rem;
+        background-color: #f4f7f6;
+    }
+    table th,
+    table td {
+        padding: 0.5rem;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+        border: 1px solid #dcdcdc;
+    }
+    table th {
+        background-color: var(--primary-color-dark);
+        color: #fff;
+        font-weight: bold;
+    }
+    table td {
+        background-color: var(--primary-color);
+    }
+    tfoot td {
+        font-weight: bold;
+        background-color: #f9f9f9;
+    }
+    table .remove-item{
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #e63946; /* Red for remove */
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    /* Button Styles */
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    .button-container button {
+        flex: 1; 
+        padding: 0.6rem;
+        font-size: 1rem;
+        color: #fff;
+        font-weight: bold;
+        background-color: var(--primary-color-dark);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .button-container button:hover {
+        background-color: #3d6db7;
+    }
+    /* Tablet screen styles */
+    @media screen and (min-width: 728px) {
+        .medicine-list {
+            justify-content: flex-start;
+            gap: 2rem;
+        }
+        .medicine-item {
+            width: calc(50% - 2rem); 
+        }
+        .add-to-cart-btn{
+            font-size: 1.2rem;
+        }
+        #cart {
+            width: 90vw;
+            font-size: 1.2rem;
+        }
+        table th,
+        table td {
+            font-size: 1.2rem;
+        }
+        .button-container {
+            flex-direction: row; 
+            gap: 0.8rem;
+        }
+        .button-container button{
+            font-size: 1.2rem;
+        }
+    }
+    /* Desktop screen styles */
+    @media screen and (min-width: 1024px) {
+        .medicine-list {
+            justify-content: center;  
+            gap: 2rem;
+        }
+        .medicine-item {
+            width: calc(25% - 2rem);  
+        }
+        #cart {
+            width: 95%;
+            font-size: 1.2rem;
+        }
+        table th,
+        table td {
+            font-size: 1.2rem;
+        }
+        .button-container {
+            flex-direction: row; 
+            gap: 1.5rem;
+        }
+        .button-container button{
+            font-size: 1.2rem;
+        }
+    }
