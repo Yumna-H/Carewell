@@ -7,7 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.getElementById('save-favorites').addEventListener('click', saveFavorites);
 document.getElementById('apply-favorites').addEventListener('click', applyFavorites);  
-document.getElementById('buy-now').addEventListener('click', proceedToCheckout);
+document.getElementById('buy-now').addEventListener('click', function (event) {
+    if (!validateCartBeforeCheckout()) {
+        event.preventDefault(); // Stop navigation if the cart is empty
+    } else {
+        proceedToCheckout(); // Call your existing checkout function
+    }
+});
 
 function loadMedicines() {
     fetch('./JSON/Medicines.json')
@@ -47,15 +53,16 @@ function renderMedicines(data) {
                 <h4 class="medicine-name">${item.name}</h4>
                 <p class="medicine-price">LKR ${item.price}</p>
                 <label for="${medicineQuantityId}" class="sr-only">Quantity</label>
-                <input type="number" min="1" value="1" id="${medicineQuantityId}" class="medicine-quantity" pattern="\d*">
+                <input type="text" value="1" id="${medicineQuantityId}" class="medicine-quantity" pattern="\d*">
                 <button class="add-to-cart-btn">Add to Cart</button>
             `;
+
             // Add event listener for the 'input' event to validate quantity input
             const qtyInput = medicineItemDiv.querySelector(`#${medicineQuantityId}`);
-            qtyInput.addEventListener('input', function() {
-                if (!/^\d+$/.test(qtyInput.value)) {
-                    alert('Please enter a valid number for quantity.');
-                    qtyInput.value = '';  // Clear invalid input
+            qtyInput.addEventListener('input', function(event) {
+                if (!/^\d*$/.test(event.target.value) || parseInt(event.target.value) <= 0) {
+                    alert('Please enter a valid positive number for quantity.');
+                    event.target.value = '';  // Clear invalid input
                 }
             });
 
@@ -78,7 +85,6 @@ function renderMedicines(data) {
         medicineContainer.appendChild(categoryContainer);
     });
 }
-
 
 function addToCart(name, price, qtyInputId) {
     try {
@@ -165,30 +171,42 @@ function applyFavorites() {
         if (!favorites || favorites.length === 0) {
             alert('No Favorites Saved!!');
         } else {
-            favorites.forEach(item => {
-                const existingItem = cart.find(cartItem => cartItem.name === item.name);
+            // Merge favorites with the current cart
+            favorites.forEach(favoriteItem => {
+                const existingItem = cart.find(cartItem => cartItem.name === favoriteItem.name);
                 if (existingItem) {
-                    existingItem.qty += item.qty;
+                    // If the item already exists in the cart, increase its quantity
+                    existingItem.qty += favoriteItem.qty;
                 } else {
-                    cart.push(item);
+                    // If the item is not in the cart, add it
+                    cart.push(favoriteItem);
                 }
             });
+
+            // Update the cart display
             renderCart();
+            alert('Favorites applied! Items have been added to your cart.');
         }
     } catch (error) {
         console.error('Error applying favorites:', error);
-        alert('An error has occurred while applying your favorites. Please try again...');
+        alert('An error occurred while applying your favorites. Please try again...');
     }
 }
 
+function validateCartBeforeCheckout() {
+    if (cart.length === 0) {
+        alert("Your cart is empty. Please add items to the cart before proceeding to checkout.");
+        return false; // Prevent navigation
+    }
+    return true; // Allow navigation
+}
 
 function proceedToCheckout() {
     try {
         localStorage.setItem('cart', JSON.stringify(cart));
         console.log('Cart saved:', JSON.stringify(cart));
         window.location.href = 'Checkout.html';
-    }
-    catch (error) {
+    } catch (error) {
         console.error('Error during checkout: ', error);
         alert('An error occurred while proceeding to checkout. Please try again.');
     }
